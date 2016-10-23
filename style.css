@@ -1,0 +1,12 @@
+h1{
+	text-align: center;
+}
+.container{
+	margin: 0 auto;
+}
+
+.block{
+	float: left;
+	box-sizing: border-box;
+	border: 1px solid black;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Sketchpad sort a</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+	<script type="text/javascript">
+	
+	
+	$numberx = prompt('Grid x');
+	$numbery = prompt('Grid y');
+	$margin = 1;
+
+	$containerwidth = 1200-(($margin*2)*$numberx);
+	$containerheight = 1200-(($margin*2)*$numbery);
+
+	$blockwidth = $containerwidth/$numberx;
+	$blockheight = $containerwidth/$numbery;
+
+	</script>
+</head>
+<body>
+
+	<div class="container" style="width:1200px; height: 1200px;">
+	<h1> Sketchpad made with Javascript and jQuery </h1>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			for(i=0;i<$numberx;i++){
+				for(k=0;k<$numbery;k++){
+					$('.container').append("<div class='block' style='width: "+ $blockwidth + "px; height: "+ $blockheight + "px; margin:" + $margin + "px;'></div>");
+				}
+			}
+			$('.block').mouseover(function(){
+				$(this).css('background-color','red');
+			});
+		});
+		</script>
+	</div>
+
+</body>
+</html>
